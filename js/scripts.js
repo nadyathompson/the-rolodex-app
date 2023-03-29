@@ -1,48 +1,51 @@
-/*let pokemonList = [{name: "Bulbasaur", height: 0.7, type: ['grass','poison']}, 
-                   {name: "Charmander", height: 0.6, type: ['fire']}, 
-                   {name: "Squirtle", height: 1.9, type: ['water']},
-                   {name: "Pikachu", height: 0.4, type: ['electric']}];*/
-
-/*for (let i=0; i<pokemonList.length; i++){
-    let pokemonInfo = pokemonList[i].name + ' (height: ' + pokemonList[i].height + ', ' + pokemonList[i].type + ' type)';
-    if (pokemonList[i].height > 1.8) {
-        pokemonInfo += ' - wow that is big';
-        }
-    pokemonInfo += '<br><br>';
-    document.write(pokemonInfo);
-}*/
-
 let pokemonRepository = (function () {
-    let pokemonList = [{name: "Bulbasaur", height: 0.7, type: ['grass','poison']}, 
+    let repository = [{name: "Bulbasaur", height: 0.7, type: ['grass','poison']}, 
                         {name: "Charmander", height: 0.6, type: ['fire']}, 
                         {name: "Squirtle", height: 1.9, type: ['water']},
                         {name: "Pikachu", height: 0.4, type: ['electric']}];
 
-    function add(pokemon) {
-    pokemonList.push(pokemon);
+    function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listItem = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem);
+    button.addEventListener('click', function () {
+    showDetails(pokemon);
+    })
+    }
+
+    function showDetails(pokemon){
+        console.log(pokemon.name)
     }
 
     function getAll() {
-    return pokemonList;
+        return repository;
     }
 
+    function add(pokemon) {
+        repository.push(pokemon);
+        }
+
     return {
+    getAll: getAll,
     add: add,
-    getAll: getAll
+    addListItem: addListItem
     };
-})();  
+})();
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
 
 
-function loopList(plist){
-    if (plist.height > 1.8) {
-        document.write(plist.name + ' (height: ' + plist.height + ', ' + plist.type + ' type)' + ' - wow that is big'+ '<br>'+ '<br>');
-    } 
-    else {
-    document.write(plist.name + ' (height: ' + plist.height + ', ' + plist.type + ' type)'+ '<br>'+ '<br>');
-    } 
-}
 
-pokemonRepository.getAll().forEach(loopList);
-  
+
+
+
+
+
 
 
