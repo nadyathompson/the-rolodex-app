@@ -118,10 +118,6 @@ let pokemonRepository = (function () {
                 }
             });
         }
-    
-        document.querySelector ('button.button-class').addEventListener('click', () => {
-            showDetails ('Modal Title', 'Modal Content');
-        });
             });
   }
   
