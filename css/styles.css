@@ -1,25 +1,49 @@
+body {
+    background-color: rgb(241, 73, 84);
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+}
+
+title{
+    margin: 50px;
+}
+
 ul{
-list-style-type: none;
+    list-style-type: none;
+}
+
+.list-group-item{
+    background-color: rgb(241, 73, 84);
+    border: none;
+}
+
+.pokemon-list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1% 0%;
 }
 
 .button-class {
-    background-color: lightgrey;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 200px;
     color: black;
-    border: none; 
-    padding: 16px 32px;
+    border: 2px solid black; 
+    padding: 10px 32px;
     text-align: center;
-    text-decoration: none;
+    text-transform: capitalize;
     display: inline-block;
-    font-size: 20px;
+    font-size: 18px;
     margin: 4px 2px;
     cursor: pointer;
   }
 
-#modal-container{
+/*#modal-container{
     display: none;
-}
+}*/
 
-#modal-container.is-visible {
+/*#modal-container.is-visible {
     position: fixed;
     padding: 20px;
     box-sizing: border-box;
@@ -29,18 +53,18 @@ list-style-type: none;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
 
-    /* to show it above other content */
+   
     z-index: 999; 
 
-    /* to allow scrolling if the screen is not high enough*/
+    
     overflow: auto; 
 
-    /* this is used to center the modal */
+    
     display: grid;
     text-align: center;
-}
+}*/
 
-.modal {
+/*.modal {
     margin: auto;
     display: inline-block;
     box-sizing: border-box;
@@ -49,6 +73,14 @@ list-style-type: none;
     width: 100%;
     max-width: 700px;
     text-align: left;
+}*/
+
+.modal-dialog{
+    background: #fff;
+}
+
+.modal-header{
+    border: none;
 }
 
 .modal-close {
@@ -67,4 +99,7 @@ list-style-type: none;
 .modal p {
     margin-bottom: 0;
 }
-  
+
+.modal img {
+    margin: 0;
+}

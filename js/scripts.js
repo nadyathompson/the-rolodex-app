@@ -19,10 +19,15 @@ let pokemonRepository = (function () {
 
     function addListItem(pokemon){
         let repository = document.querySelector(".pokemon-list");
+        //repository.classList.add("list-group");
         let listItem = document.createElement("li");
+        listItem.classList.add("list-group-item");
         let button = document.createElement("button");
         button.innerText = pokemon.name;
         button.classList.add("button-class");
+        button.classList.add("btn");
+        button.setAttribute('data-toggle', 'modal');
+        button.setAttribute('data-target', '.modal');
         listItem.appendChild(button);
         repository.appendChild(listItem);
         button.addEventListener("click", 
@@ -62,7 +67,7 @@ let pokemonRepository = (function () {
 
     function showDetails(item) {
         pokemonRepository.loadDetails(item).then(function () {
-            console.log(item);
+            //console.log(item);
 
             let modalContainer = document.querySelector ('#modal-container');
 
@@ -95,7 +100,6 @@ let pokemonRepository = (function () {
             
             let contentElement = document.createElement ('p');
             contentElement.innerText =('Height: ' + item.height + '\n' +  '\n' + 'Types: ' + pokemonTypes);
-
 
         modal.appendChild (closeButtonElement);
         modal.appendChild (titleElement);
