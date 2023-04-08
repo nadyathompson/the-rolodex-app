@@ -24,7 +24,7 @@ ul{
     gap: 1% 0%;
 }
 
-.button-class {
+.btn-primary {
     background-color: rgb(255, 255, 255);
     width: 100%;
     max-width: 200px;
@@ -39,56 +39,35 @@ ul{
     cursor: pointer;
   }
 
-/*#modal-container{
-    display: none;
-}*/
-
-/*#modal-container.is-visible {
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-
-   
-    z-index: 999; 
-
-    
-    overflow: auto; 
-
-    
-    display: grid;
-    text-align: center;
-}*/
-
-/*.modal {
-    margin: auto;
-    display: inline-block;
-    box-sizing: border-box;
-    background: #fff;
-    padding: 15px;
-    width: 100%;
-    max-width: 700px;
-    text-align: left;
-}*/
-
 .modal-dialog{
-    background: #fff;
+    background: none;
 }
 
 .modal-header{
     border: none;
 }
 
-.modal-close {
-    float: right;
-    border: 0;
-    background: none;
-    color: #000;
-    text-decoration: underline;
+.modal-title{
+    margin-left: 40px;
+ }
+
+.modal-close{
+    margin: 5px;
+    border: none;
+    background-color: #fff;
+    scale: 2;
+}
+
+.modal-close:hover {
+    background-color: rgb(228, 76, 76);
+}
+
+.modal-body {
+    padding: 50px;
+}
+
+.modal-img {
+    padding: 0px;
 }
 
 .modal h1 {
@@ -98,8 +77,4 @@ ul{
 
 .modal p {
     margin-bottom: 0;
-}
-
-.modal img {
-    margin: 0;
 }
