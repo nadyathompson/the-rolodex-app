@@ -1,5 +1,5 @@
 # the-rolodex-app
-A basic Javascript rolodex app, adapted to showcase pokemon. The pokemon are imported from an external API. You can access it by either downloading the local files and opening 'index.html', or with the direct link:  
+A basic Javascript rolodex app, adapted to showcase pokemon. The pokemon are imported from an external API. You can access it by either downloading the local files and opening 'index.html', or with the direct link: https://nadyathompson.github.io/the-rolodex-app/.
 
 Languages: HTML, CSS, JavaScript
 
