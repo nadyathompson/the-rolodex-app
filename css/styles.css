@@ -1,12 +1,14 @@
-body {
-    background-color: rgb(241, 73, 84);
+body{
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(255, 255, 255);
     margin: 2%;
     padding: 2%;
     text-align: center;
 }
 
-title{
-    margin: 50px;
+.title{
+    padding: 30px;
+    padding-bottom: 75px;
 }
 
 ul{
@@ -14,7 +16,7 @@ ul{
 }
 
 .list-group-item{
-    background-color: rgb(241, 73, 84);
+    background-color: rgb(255, 255, 255);
     border: none;
 }
 
@@ -25,16 +27,17 @@ ul{
 }
 
 .btn-primary {
-    background-color: rgb(255, 255, 255);
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(214, 28, 28);
     width: 100%;
     max-width: 200px;
-    color: black;
+    color: white;
     border: 2px solid black; 
     padding: 10px 32px;
     text-align: center;
     text-transform: capitalize;
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
   }
@@ -48,6 +51,7 @@ ul{
 }
 
 .modal-title{
+    padding-top: 30px;
     margin-left: 40px;
  }
 
@@ -67,7 +71,8 @@ ul{
 }
 
 .modal-img {
-    padding: 0px;
+    scale: 1.5;
+    padding-bottom: 30px;
 }
 
 .modal h1 {
